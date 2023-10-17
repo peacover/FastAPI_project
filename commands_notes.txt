@@ -1,0 +1,8 @@
+create virtual environment : python3 -m venv <name>
+activate virtual environment : source ./<name>/bin/activate
+deactivate virtual environment : deactivate
+vscode select interpreter : ctrl + shift + p -> python interpreter  -> enter interpreter path -> ./<name>/bin/python
+
+install fastapi : pip install "fastapi[all]"
+
+run on local : uvicorn main:app --reload
