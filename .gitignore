@@ -1,3 +1,62 @@
-./.venv/*
-./__pycache__/*
-.vscode/*
+# Python-specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual environment
+venv/
+env/
+.venv/
+.vscode/
+.vscode-server/
+
+# Logs and temporary files
+*.log
+*.log.*
+*.tmp
+
+# Compiled files
+*.pyc
+
+# Dependency directories (e.g., created by pip)
+lib/
+lib64/
+bin/
+include/
+__pycache__/
+
+# IDE and editor-specific files (e.g., PyCharm, VS Code)
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.svn/
+*.swp
+*.swo
+.swo
+*.subl.*
+
+# Editor-specific files (e.g., Vim)
+*.swp
+*.swo
+*.swn
+*.swm
+
+# Ignore database migrations if you're using a database with migrations
+# Make sure to adjust this based on your specific database and migration setup
+alembic/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local .env files
+.env
+
+# Dependency files
+*.env
