@@ -1,5 +1,4 @@
 from typing import Optional
-from urllib import response
 from fastapi import FastAPI, HTTPException, Response, status
 from pydantic import BaseModel
 
