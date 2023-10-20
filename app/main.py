@@ -2,6 +2,8 @@ from typing import Optional
 from fastapi import FastAPI, HTTPException, Response, status
 from pydantic import BaseModel
 
+from app.generate import ft_shuffle
+
 app = FastAPI()
 
 
@@ -14,8 +16,6 @@ class Post(BaseModel):
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
-
-
 
 # send 201 status code when post is created by default it is 200
 @app.post("/create_post", status_code=status.HTTP_201_CREATED)
@@ -45,4 +45,9 @@ async def get_post(post_id: int, response: Response):
 async def delete_post(post_id: int):
     # code
     return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+@app.get("/generated_list/{nb_groups}")
+async def generated_list(nb_groups: int):
+    return ft_shuffle(nb_groups)
+    
     
